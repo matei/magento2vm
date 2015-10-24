@@ -24,8 +24,8 @@ packages = ['php5-mcrypt', 'php-soap', 'php5-xsl', 'php5-intl', 'php5-redis', 'p
 
 packages.each do |p|
     package p
-    execute "php5enmode #{p}" do
-        command "php5enmode #{p}"
+    execute "php5enmod #{p}" do
+        command "php5enmod #{p}"
     end
 end
 
