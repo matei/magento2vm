@@ -40,7 +40,7 @@ packages = ['php5-mcrypt', 'php-soap', 'php5-xsl', 'php5-intl']
 
 packages.each do |p|
     package p
-    execute "php5enmode #{p}"
+    execute "php5enmode #{p}" do
         command "php5enmode #{p}"
     end
 end
