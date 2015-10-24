@@ -20,23 +20,7 @@ php_pear_channel 'pecl.php.net' do
   action :update
 end
 
-php_pear 'xdebug' do
-  # Specify that xdebug.so must be loaded as a zend extension
-  zend_extensions ['xdebug.so']
-  action :install
-end
-
-
-php_pear 'apc' do
-  action :install
-  directives(:shm_size => 128, :enable_cli => 1)
-end
-
-php_pear 'redis' do 
-    action :install
-end
-
-packages = ['php5-mcrypt', 'php-soap', 'php5-xsl', 'php5-intl']
+packages = ['php5-mcrypt', 'php-soap', 'php5-xsl', 'php5-intl', 'php5-redis', 'php-apc', 'php5-xdebug']
 
 packages.each do |p|
     package p
